@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# cherryr
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/mayaparker/cherryr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mayaparker/cherryr/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+The goal of cherryr is to simulates the game Hi-Ho Cherry-O.
+
+## Installation
+
+You can install the development version of cherryr from [GitHub](https://github.com/) with:
+
+``` {r}
+# install.packages("cherryr")
+pak::pak("mayaparker/cherryr")
+```
+
+## Example
+
+This is a basic example of how to play the game:
+
+```{r example}
+library(cherryr)
+
+game1 <- play_game(tree = 10, max_game = 100)
+game1
+
+```
+
+A plot of a game of Hi-Ho Cherry-O over time:
+
+```{r pressure, echo = FALSE}
+plot(game1)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
